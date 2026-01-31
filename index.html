@@ -29,7 +29,10 @@ fetch('data.json')
           <details>
             <summary>Lihat detail</summary>
 
-            <pre class="prompt">${item.prompt}</pre>
+            <div class="prompt-wrap">
+  <button class="copy-btn" onclick="copyPrompt(this)">Copy prompt</button>
+  <pre class="prompt">${item.prompt}</pre>
+</div>
 
             ${
               item.result.endsWith('.mp4')
@@ -44,6 +47,14 @@ fetch('data.json')
     })
   })
 </script>
-
+<script>
+function copyPrompt(btn) {
+  const promptText = btn.nextElementSibling.innerText
+  navigator.clipboard.writeText(promptText)
+  btn.innerText = 'Copied'
+  setTimeout(() => btn.innerText = 'Copy prompt', 1500)
+}
+</script>
+  
 </body>
 </html>
