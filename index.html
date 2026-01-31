@@ -35,18 +35,18 @@ fetch('data.json')
           <details>
             <summary>Lihat detail</summary>
 
-            <div class="prompt-wrap">
+            ${
+  item.result.endsWith('.mp4')
+    ? `<video controls src="${item.result}"></video>`
+    : `<img src="${item.result}" alt="">`
+}
+
+<div class="prompt-wrap">
   <button class="copy-btn" onclick="copyPrompt(this)">Copy prompt</button>
   <pre class="prompt">${item.prompt}</pre>
 </div>
 
-            ${
-              item.result.endsWith('.mp4')
-              ? `<video controls src="${item.result}"></video>`
-              : `<img src="${item.result}" alt="">`
-            }
-
-            <p class="notes">${item.notes || '— tidak ada catatan —'}</p>
+<p class="notes">${item.notes || '— tidak ada catatan —'}</p>
           </details>
         </section>
       `
