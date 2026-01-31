@@ -36,8 +36,10 @@ header p {
 }
 
 .type {
-  font-size: 11px;
-  color: #888;
+  font-size: 10px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 details {
