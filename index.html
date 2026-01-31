@@ -37,7 +37,7 @@ fetch('data.json')
               : `<img src="${item.result}" alt="">`
             }
 
-            <p class="notes">${item.notes}</p>
+            <p class="notes">${item.notes || '— tidak ada catatan —'}</p>
           </details>
         </section>
       `
