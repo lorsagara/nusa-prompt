@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Contoh Prompt",
+    "type": "image",
+    "prompt": "Tulis prompt kamu di sini",
+    "result": "assets/images/example.jpg",
+    "notes": "Catatan singkat"
+  }
+]

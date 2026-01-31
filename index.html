@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Prompt Vault</h1>
+  <p>Arsip prompt & hasil</p>
+</header>
+
+<main id="list"></main>
+
+<script>
+fetch('data.json')
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById('list')
+    data.forEach(item => {
+      list.innerHTML += `
+        <section class="card">
+          <h2>${item.title}</h2>
+          <span class="type">${item.type}</span>
+
+          <details>
+            <summary>Buka</summary>
+
+            <pre class="prompt">${item.prompt}</pre>
+
+            ${
+              item.result.endsWith('.mp4')
+              ? `<video controls src="${item.result}"></video>`
+              : `<img src="${item.result}" alt="">`
+            }
+
+            <p class="notes">${item.notes}</p>
+          </details>
+        </section>
+      `
+    })
+  })
+</script>
+
+</body>
+</html>

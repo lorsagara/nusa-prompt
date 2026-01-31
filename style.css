@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0e0e0e;
+  color: #eaeaea;
+}
+
+header {
+  padding: 16px;
+  border-bottom: 1px solid #222;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.card {
+  padding: 16px;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.type {
+  font-size: 11px;
+  color: #888;
+}
+
+details {
+  margin-top: 10px;
+}
+
+summary {
+  cursor: pointer;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.prompt {
+  background: #151515;
+  padding: 10px;
+  font-size: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  border-radius: 6px;
+}
+
+img, video {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.notes {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #bbb;
+}
