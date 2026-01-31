@@ -24,8 +24,12 @@ fetch('data.json')
       list.innerHTML += `
         <section class="card">
           <h2>${item.title}</h2>
-          <span class="type">${item.type}</span>
-
+          <span class="type">
+  ${item.type === 'image' ? 'Gambar' :
+    item.type === 'video' ? 'Video' :
+    item.type === 'image-to-video' ? 'Image → Video' :
+    item.type}
+</span>
           <details>
             <summary>Lihat detail</summary>
 
